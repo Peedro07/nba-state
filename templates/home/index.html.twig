@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block bannerTitle %}
+    <h1>Comparer des joueurs</h1>
+{% endblock %}
+{% block body %}
+    <div class="wrapper">
+        <div class="style-search">
+            <label for="player"></label>
+            <input type="text" name="player" id="player" placeholder="Ex: Lebron James">
+            <ul id="list-player">
+
+            </ul>
+        </div>
+    </div>
+    <div class="current-search">
+        <div class="search-only">
+        </div>
+    </div>
+    <div class="main">
+        <div class="place-title">
+
+        </div>
+        <div class="place-content">
+            <div class="place-player">
+            </div>
+            <div class="place-match">
+            </div>
+            <div class="place-pts">
+            </div>
+        </div>
+    </div>
+
+    <div class="best-action">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WYg7i2UVP_U" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('asset/js/home.js') }}"></script>
+{% endblock %}

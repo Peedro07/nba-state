@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title %}Joueurs{% endblock %}
+{% block bannerTitle %}
+    <h1>Rechercher un joueur</h1>
+{% endblock %}
+{% block body %}
+    <div class="wrapper">
+        <div class="style-search">
+            <label for="player"></label>
+            <input type="text" name="player" id="player" placeholder="Ex: Lebron James">
+            <ul id="list-player">
+
+            </ul>
+        </div>
+    </div>
+    <div class="page-player">
+        <div class="name-player">
+
+        </div>
+        <div class="stat-title">
+
+        </div>
+        <div class="stat-content">
+
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('asset/js/player.js') }}"></script>
+{% endblock %}

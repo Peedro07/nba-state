@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}Joueurs{% endblock %}
+{% block bannerTitle %}
+    <h1>{{ infoPlayer.first_name }}  {{ infoPlayer.last_name }}</h1>
+{% endblock %}
+{% block body %}
+    <div class="page-player">
+        <div class="name-player">
+
+        </div>
+        <div class="stat-title">
+            <h2>Équipe</h2>
+            <h2>Conférence</h2>
+            <h2>Points</h2>
+            <h2>Rebonds</h2>
+        </div>
+        <div class="stat-content">
+            <p>{{ infoPlayer.team.name }}</p>
+            <p>{{ infoPlayer.team.conference }}</p>
+            <p>{{ pts }}</p>
+            <p>{{ reb }}</p>
+
+        </div>
+    </div>
+
+{% endblock %}

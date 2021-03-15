@@ -1,0 +1,14 @@
+<header>
+    <div class="menu">
+        <a href="{{ path('home') }}">Accueil</a>
+        <a href="{{ path('player') }}">Fiche d'un joueur</a>
+        <a href="{{ path('search') }}">Mes recherches</a>
+        <div class="music">
+            <button class="action-musiq">
+                <i id="play" class="fas fa-play"></i>
+                <i id="stop" class="fas fa-stop"></i>
+            </button>
+            <audio id="music" src="{{ asset('audio/playlist.mp3') }}"></audio>
+        </div>
+    </div>
+</header>

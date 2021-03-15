@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+{% block body %}
+    <div class="page-search">
+        <div class="title">
+            <h1>Les recherches du site</h1>
+        </div>
+        <div class="content-search">
+            {% for data in dataSearch %}
+                <div class="item-player-search">
+                    <a href="{{ path('player.search', {id: data.id}) }}" title="{{ data.last_name }}">
+                        {{ data.first_name | upper }} {{ data.last_name }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="content-paginator">
+        {{ knp_pagination_render(dataSearch) }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% set route_name = app.request.attributes.get('_route') %}
+{% set route_admin = route_name|slice(0, 5) %}
+<!DOCTYPE html>
+<html lang="fr_FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} | NBA-State</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7f33bc48f.js" crossorigin="anonymous"></script
+</head>
+<body>
+{% include 'inc/header.html.twig' %}
+<div class="title">
+    {% block bannerTitle %}
+    {% endblock %}
+</div>
+{% block body %}
+
+{% endblock %}
+{% block javascripts %}{% endblock %}
+<script src="{{ asset('asset/js/main.js') }}"></script>
+</body>
+</html>

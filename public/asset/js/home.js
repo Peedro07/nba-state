@@ -93,17 +93,15 @@ function searchPlayer(id) {
         "idApi": parseInt(id),
         "createdAt": new Date()
     }
-    fetch("http://localhost:8000/api/searches", {
+    fetch("https://gentle-dawn-45595.herokuapp.com/api/searches", {
         method: "POST",
         headers: headers,
         body: JSON.stringify(data)
     })
         .then(function (response) {
-            console.log('ok')
             return response.json();
         })
         .then(function (data) {
-            console.log('ok 2')
             fetch('https://www.balldontlie.io/api/v1/players/' + data.idApi)
                 .then(response => response.json())
                 .then(response => {

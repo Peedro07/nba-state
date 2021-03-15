@@ -106,7 +106,7 @@ function searchPlayer(id) {
                 .then(response => response.json())
                 .then(response => {
                     // Search
-                    addClass('current', response.id, response.last_name.toUpperCase() + ' ' + response.first_name, 'search-only');
+                    addClass('current', id, response.last_name.toUpperCase() + ' ' + response.first_name, 'search-only');
                 })
                 .catch(error => {
                     console.log(error)

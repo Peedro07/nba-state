@@ -92,7 +92,7 @@ function searchPlayer(id) {
         "idApi": parseInt(id),
         "createdAt": new Date()
     }
-    fetch("http://localhost:8000/api/searches", {
+    fetch("https://gentle-dawn-45595.herokuapp.com/api/searches", {
         method: "POST",
         headers: headers,
         body: JSON.stringify(data)

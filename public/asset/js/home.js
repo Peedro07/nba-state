@@ -99,14 +99,16 @@ function searchPlayer(id) {
         body: JSON.stringify(data)
     })
         .then(function (response) {
+            console.log('ok')
             return response.json();
         })
         .then(function (data) {
+            console.log('ok 2')
             fetch('https://www.balldontlie.io/api/v1/players/' + data.idApi)
                 .then(response => response.json())
                 .then(response => {
                     // Search
-                    addClass('current', id, response.last_name.toUpperCase() + ' ' + response.first_name, 'search-only');
+                    addClass('current', response.id, response.last_name.toUpperCase() + ' ' + response.first_name, 'search-only');
                 })
                 .catch(error => {
                     console.log(error)

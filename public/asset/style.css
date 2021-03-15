@@ -305,6 +305,24 @@ header{
     justify-content: center;
     margin: 2em;
 }
+
+.delete-search{
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+.delete-search a{
+    text-decoration: none;
+    color: #FD5403;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.6em;
+}
+.delete-search a:hover{
+    background-color: #FD5403;
+    color: white;
+    transition: 0.5s;
+}
 /*
 PAGINATOR
  */

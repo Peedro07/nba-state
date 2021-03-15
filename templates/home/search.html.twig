@@ -4,13 +4,13 @@
     <div class="page-search">
         <div class="title">
             {% if dataSearch|length != 0 %}
-            <h1>Les recherches du site</h1>
+                <h1>Les recherches du site</h1>
             {% else %}
-            <h1>Aucune recherche</h1>
+                <h1>Aucune recherche</h1>
             {% endif %}
         </div>
-        <div class="content-search">
-            {% if dataSearch|length != 0 %}
+        {% if dataSearch|length != 0 %}
+            <div class="content-search">
                 {% for data in dataSearch %}
                     <div class="item-player-search">
                         <a href="{{ path('player.search', {id: data.id}) }}" title="{{ data.last_name }}">
@@ -18,9 +18,11 @@
                         </a>
                     </div>
                 {% endfor %}
-            {% endif %}
-
-        </div>
+            </div>
+            <div class="delete-search">
+                <a href="{{ path('search.delete') }}">Supprimez les recherches</a>
+            </div>
+        {% endif %}
     </div>
 
 

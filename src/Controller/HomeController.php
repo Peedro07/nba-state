@@ -59,6 +59,21 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/search/delete", name="search.delete")
+     */
+    public function searchDelete(SearchRepository $searchRepository, PaginatorInterface $paginator, Request $request): Response
+    {
+        $dataSearch = $searchRepository->findAll();
+
+        foreach ($dataSearch as $item) {
+            $this->em->remove($item);
+        }
+
+        $this->em->flush();
+        return $this->redirectToRoute('search');
+    }
+
+    /**
      * @Route("/player", name="player")
      */
     public function player(SearchRepository $searchRepository, PaginatorInterface $paginator, Request $request): Response
@@ -67,7 +82,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/player/{id}", name="player.search")
+     * @Route("/player/{id}", name="player.search", requirements={"id":"\d+"})
      */
     public function playerId($id): Response
     {

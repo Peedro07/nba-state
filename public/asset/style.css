@@ -370,3 +370,27 @@ PAGINATOR
 .pagination a:hover{
     color: #FD5403;
 }
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 981px) {
+    .col-state{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10%;
+    }
+    .stat-title {
+        display: flex;
+        color: #FD5403;
+        flex-direction: column;
+        margin: 0 1em;
+        justify-content: space-around;
+    }
+    .stat-content {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        margin: 0 1em;
+        justify-content: space-around;
+    }
+}

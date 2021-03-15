@@ -64,7 +64,7 @@ function searchPlayer(id) {
 
             // Match played title
             if (document.getElementById('title-game') === null) {
-                addTitleH2('title-game', 'Matchs joué', 'place-title')
+                addTitleH2('title-game', 'Match(s) joué(s)', 'place-title')
             }
             // Match played content
             addState(response.data.length, 'place-match', 'reb-'+id)
